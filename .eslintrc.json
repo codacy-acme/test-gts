@@ -1,5 +1,5 @@
 {
-    "extends": "./node_modules/gts/",
+    "extends": "./node_modules/gts/.eslintrc.json",
     "rules": {
       "@typescript-eslint/no-empty-interface": 1,
       "node/no-unpublished-import": [
