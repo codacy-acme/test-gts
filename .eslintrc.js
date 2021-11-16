@@ -1,7 +1,17 @@
 var pathJoin = require('path').join;
 
+const fs = require("fs")
+
+pathToNodeModules = () => {
+  if (fs.existsSync("./node_modules")) {
+    return pathJoin(__dirname, "/node_modules")
+  } else {
+    return "/node_modules"
+  }
+}
+
 module.exports = {
-  "extends": pathJoin(__dirname, "/node_modules/gts"),
+  "extends": pathToNodeModules() + "/gts",
   "rules": {
     "@typescript-eslint/no-empty-interface": 1,
     "node/no-unpublished-import": [
