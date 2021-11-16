@@ -1,15 +1,3 @@
-var pathJoin = require('path').join;
-
-const fs = require("fs")
-
-pathToNodeModules = () => {
-  if (fs.existsSync("./node_modules")) {
-    return pathJoin(__dirname, "/node_modules")
-  } else {
-    return "/node_modules"
-  }
-}
-
 module.exports = {
   "extends": require.resolve("gts"),
   "rules": {
