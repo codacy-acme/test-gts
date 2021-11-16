@@ -11,7 +11,7 @@ pathToNodeModules = () => {
 }
 
 module.exports = {
-  "extends": pathToNodeModules() + "/gts",
+  "extends": require.resolve("gts"),
   "rules": {
     "@typescript-eslint/no-empty-interface": 1,
     "node/no-unpublished-import": [
